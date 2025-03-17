@@ -1,0 +1,147 @@
+/* Estilos para inputs */
+.converter-input,
+.converter-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-card);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.converter-input:focus,
+.converter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.input-focus .converter-input,
+.input-focus .converter-select {
+  border-color: var(--color-primary);
+}
+
+.input-focus::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  opacity: 0.2;
+  z-index: 0;
+  animation: pulse 2s infinite;
+}
+
+.converter-input {
+  text-align: right;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+}
+
+.converter-input::-webkit-outer-spin-button,
+.converter-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.converter-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.converter-input[readonly] {
+  background-color: var(--color-background);
+  cursor: default;
+  border-color: transparent;
+  color: var(--color-primary);
+  font-weight: 600;
+  position: relative;
+}
+
+.converter-input[readonly]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(67, 97, 238, 0.05),
+    rgba(76, 201, 240, 0.05)
+  );
+  border-radius: var(--border-radius);
+  z-index: 0;
+}
+
+.converter-select {
+  cursor: pointer;
+  padding-right: 2.5rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1em;
+}
+
+.converter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  position: relative;
+}
+
+.converter-input-group-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: -0.25rem;
+  font-weight: 500;
+}
+
+/* Efeito de hover no botão de troca */
+.swap-btn {
+  transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6),
+    box-shadow 0.3s ease;
+}
+
+.swap-btn.hover-effect {
+  animation: pulse 1s infinite;
+}
+
+/* Efeito de animação ao carregar valores */
+@keyframes valueChange {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.value-changed {
+  animation: valueChange 0.3s ease-out;
+}
+
+@media (min-width: 768px) {
+  .converter-input {
+    font-size: var(--font-size-xl);
+  }
+
+  .converter-select {
+    font-size: var(--font-size-md);
+  }
+}

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perguntas Frequentes - ConvertaFacil</title>
+    <meta
+      name="description"
+      content="Respostas para as perguntas mais frequentes sobre o ConvertaFacil, a sua calculadora de conversão de unidades."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="../assets/img/favicon/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 240 60"
+            width="180"
+            height="45"
+          >
+            <!-- Fundo do logo -->
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4361ee" />
+                <stop offset="100%" stop-color="#4cc9f0" />
+              </linearGradient>
+            </defs>
+
+            <!-- Círculos decorativos -->
+            <circle cx="30" cy="30" r="24" fill="url(#logoGradient)" />
+            <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+            <!-- Ícone de conversão -->
+            <path
+              d="M19 32l6 6 6-6M31 28l-6-6-6 6"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="25"
+              y1="14"
+              x2="25"
+              y2="46"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="1,5"
+            />
+
+            <!-- Texto ConvertaFacil -->
+            <text
+              x="65"
+              y="38"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="24"
+              font-weight="700"
+              fill="#212529"
+            >
+              <tspan fill="#4361ee">Converta</tspan>
+              <tspan fill="#f72585">Facil</tspan>
+            </text>
+          </svg>
+        </a>
+
+        <div class="header-actions">
+          <a href="/" class="btn btn-outline btn-sm">Início</a>
+          <a href="/pages/documentation.html" class="btn btn-outline btn-sm"
+            >Documentação</a
+          >
+          <button
+            id="darkModeToggle"
+            class="theme-toggle"
+            aria-label="Alternar modo escuro"
+          >
+            <i class="icon icon-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="faq-header">
+          <h1>Perguntas Frequentes</h1>
+          <p>
+            Encontre respostas para as dúvidas mais comuns sobre o ConvertaFacil
+          </p>
+        </div>
+
+        <div class="faq-search">
+          <div class="search-container">
+            <i class="icon icon-search"></i>
+            <input
+              type="text"
+              id="faqSearch"
+              placeholder="Buscar perguntas..."
+              class="search-input"
+            />
+          </div>
+        </div>
+
+        <div class="faq-content">
+          <div class="faq-categories">
+            <button class="category-btn active" data-category="geral">
+              Geral
+            </button>
+            <button class="category-btn" data-category="conversoes">
+              Conversões
+            </button>
+            <button class="category-btn" data-category="moedas">Moedas</button>
+            <button class="category-btn" data-category="historico">
+              Histórico
+            </button>
+            <button class="category-btn" data-category="tecnico">
+              Técnico
+            </button>
+          </div>
+
+          <div class="faq-items">
+            <!-- Perguntas Gerais -->
+            <div class="faq-group" data-category="geral">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>O que é o ConvertaFacil?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    O ConvertaFacil é uma calculadora de conversão online
+                    gratuita que permite converter valores entre diferentes
+                    unidades de medida, incluindo moedas, temperatura,
+                    comprimento, peso, volume e área. O objetivo é oferecer uma
+                    ferramenta simples, rápida e precisa para todas as suas
+                    necessidades de conversão.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>É preciso criar uma conta para usar o ConvertaFacil?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Não, o ConvertaFacil é completamente gratuito e não requer
+                    nenhum tipo de cadastro ou conta. Basta acessar o site e
+                    começar a usar imediatamente.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>O ConvertaFacil funciona em dispositivos móveis?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Sim! O ConvertaFacil foi desenvolvido com design responsivo,
+                    o que significa que funciona perfeitamente em smartphones,
+                    tablets e computadores. A interface se adapta
+                    automaticamente ao tamanho da tela do seu dispositivo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    O ConvertaFacil é acessível para pessoas com deficiência?
+                  </h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Sim, nos esforçamos para tornar o ConvertaFacil acessível a
+                    todos os usuários. A ferramenta foi desenvolvida seguindo as
+                    diretrizes de acessibilidade WCAG, incluindo suporte a
+                    navegação por teclado, descrições de elementos para leitores
+                    de tela e bom contraste de cores.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Perguntas sobre Conversões -->
+            <div
+              class="faq-group"
+              data-category="conversoes"
+              style="display: none"
+            >
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Quais tipos de conversão o ConvertaFacil suporta?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    O ConvertaFacil suporta os seguintes tipos de conversão:
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Moeda:</strong> Conversão entre diferentes moedas
+                      com taxas atualizadas
+                    </li>
+                    <li>
+                      <strong>Temperatura:</strong> Conversão entre Celsius,
+                      Fahrenheit e Kelvin
+                    </li>
+                    <li>
+                      <strong>Comprimento:</strong> Conversão entre unidades
+                      como metro, quilômetro, milha, etc.
+                    </li>
+                    <li>
+                      <strong>Peso:</strong> Conversão entre unidades como
+                      quilograma, libra, onça, etc.
+                    </li>
+                    <li>
+                      <strong>Volume:</strong> Conversão entre unidades como
+                      litro, galão, metro cúbico, etc.
+                    </li>
+                    <li>
+                      <strong>Área:</strong> Conversão entre unidades como metro
+                      quadrado, hectare, acre, etc.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>As conversões do ConvertaFacil são precisas?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Sim, o ConvertaFacil utiliza fórmulas e fatores de conversão
+                    padrão para garantir resultados precisos. Para conversão de
+                    moedas, utilizamos dados de APIs confiáveis com taxas
+                    atualizadas regularmente.
+                  </p>
+                  <p>
+                    As conversões de unidades físicas (temperatura, comprimento,
+                    peso, etc.) são baseadas em constantes e fórmulas
+                    matemáticas padrão reconhecidas internacionalmente.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Posso visualizar a fórmula usada na conversão?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Sim! O ConvertaFacil exibe a fórmula ou taxa de conversão
+                    utilizada para cada cálculo na seção de informações abaixo
+                    do resultado. Isso permite que você entenda exatamente como
+                    o valor foi convertido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    Como posso inverter a direção da conversão rapidamente?
+                  </h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Basta clicar no botão de troca (com ícone de setas para cima
+                    e para baixo) localizado entre os campos de entrada e saída.
+                    Isso inverterá as unidades selecionadas e recalculará o
+                    resultado automaticamente.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Perguntas sobre Moedas -->
+            <div class="faq-group" data-category="moedas" style="display: none">
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    Com que frequência as taxas de câmbio são atualizadas?
+                  </h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    As taxas de câmbio são atualizadas diariamente através da
+                    ExchangeRate-API. Cada vez que você acessa o ConvertaFacil,
+                    verificamos se é necessário obter taxas atualizadas para
+                    garantir a precisão das conversões.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Quais moedas são suportadas pelo ConvertaFacil?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Atualmente, o ConvertaFacil suporta as seguintes moedas:
+                  </p>
+                  <ul class="column-list">
+                    <li>Dólar Americano (USD)</li>
+                    <li>Euro (EUR)</li>
+                    <li>Real Brasileiro (BRL)</li>
+                    <li>Libra Esterlina (GBP)</li>
+                    <li>Iene Japonês (JPY)</li>
+                    <li>Dólar Canadense (CAD)</li>
+                    <li>Dólar Australiano (AUD)</li>
+                    <li>Yuan Chinês (CNY)</li>
+                    <li>Franco Suíço (CHF)</li>
+                    <li>Peso Argentino (ARS)</li>
+                  </ul>
+                  <p>
+                    Estamos sempre trabalhando para adicionar mais moedas ao
+                    nosso conversor.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    O que acontece se a API de taxas de câmbio estiver
+                    indisponível?
+                  </h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    O ConvertaFacil armazena as taxas de câmbio mais recentes em
+                    cache local. Se a API estiver indisponível, utilizaremos as
+                    taxas em cache para continuar oferecendo o serviço. Caso não
+                    haja dados em cache disponíveis, utilizamos taxas fixas de
+                    backup para manter a funcionalidade básica, mas com uma
+                    notificação informando que as taxas podem não estar
+                    atualizadas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Perguntas sobre Histórico -->
+            <div
+              class="faq-group"
+              data-category="historico"
+              style="display: none"
+            >
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Como funciona o histórico de conversões?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    O ConvertaFacil salva automaticamente as últimas 10
+                    conversões realizadas na seção de histórico. Cada entrada no
+                    histórico mostra o valor original, o valor convertido, as
+                    unidades utilizadas e a data/hora da conversão.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Minhas conversões são salvas permanentemente?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    As conversões são salvas apenas no navegador local usando o
+                    localStorage. Isso significa que elas persistirão entre
+                    sessões de navegação no mesmo dispositivo e navegador, mas
+                    não estão acessíveis em outros dispositivos. Se você limpar
+                    os dados do navegador, o histórico também será removido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Como posso reutilizar uma conversão anterior?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Basta clicar em qualquer item na lista de histórico e os
+                    valores e unidades serão automaticamente carregados na
+                    calculadora de conversão. Isso facilita a reutilização ou
+                    ajuste de conversões anteriores.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Como limpar meu histórico de conversões?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Você pode remover itens individuais do histórico clicando no
+                    ícone de lixeira ao lado de cada item. Para limpar todo o
+                    histórico de uma vez, clique no botão "Limpar histórico" na
+                    parte inferior da seção de histórico.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Perguntas Técnicas -->
+            <div
+              class="faq-group"
+              data-category="tecnico"
+              style="display: none"
+            >
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>O ConvertaFacil coleta meus dados?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Não. O ConvertaFacil não coleta nenhum dado pessoal dos
+                    usuários. Todas as conversões são processadas localmente no
+                    seu navegador, e o histórico é armazenado apenas localmente
+                    no seu dispositivo. Nenhuma informação é enviada para
+                    servidores externos, exceto as chamadas necessárias à API de
+                    taxas de câmbio.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>O ConvertaFacil funciona offline?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Parcialmente. A maioria das conversões (temperatura,
+                    comprimento, peso, volume e área) funcionam completamente
+                    offline. Para conversão de moedas, você precisará de uma
+                    conexão com a internet para obter as taxas de câmbio
+                    atualizadas. No entanto, se você já tiver usado o conversor
+                    de moedas anteriormente, as taxas em cache podem ser
+                    utilizadas por um período limitado mesmo sem conexão.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>
+                    Qual tecnologia é usada para desenvolver o ConvertaFacil?
+                  </h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    O ConvertaFacil é desenvolvido utilizando tecnologias web
+                    modernas:
+                  </p>
+                  <ul>
+                    <li>HTML5 para estrutura</li>
+                    <li>CSS3 modular para estilização</li>
+                    <li>
+                      JavaScript (ES6+) para funcionalidade e interatividade
+                    </li>
+                    <li>
+                      LocalStorage para armazenamento do histórico de conversões
+                    </li>
+                    <li>Fetch API para comunicação com serviços externos</li>
+                  </ul>
+                  <p>
+                    O código-fonte está disponível no
+                    <a
+                      href="https://github.com/LuisT-ls/convertafacil"
+                      target="_blank"
+                      rel="noopener"
+                      >GitHub</a
+                    >, onde você pode explorar a implementação em detalhes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h3>Posso incorporar o ConvertaFacil no meu site?</h3>
+                  <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                  <p>
+                    Atualmente não oferecemos uma forma oficial de incorporar o
+                    ConvertaFacil em outros sites. No entanto, como o projeto é
+                    de código aberto, você pode fazer um fork do repositório no
+                    GitHub e adaptá-lo para suas necessidades, seguindo os
+                    termos da licença MIT incluída no projeto.
+                  </p>
+                  <p>
+                    Se você deseja usar o ConvertaFacil em um projeto comercial
+                    ou tem uma ideia de parceria, entre em contato conosco
+                    através do e-mail disponibilizado no rodapé do site.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-more">
+            <h3>Não encontrou o que procurava?</h3>
+            <p>
+              Se você tem alguma dúvida que não foi respondida aqui, sinta-se à
+              vontade para entrar em contato:
+            </p>
+            <a href="mailto:contato@convertafacil.com" class="btn btn-primary">
+              <i class="icon icon-mail"></i> Enviar e-mail
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 240 60"
+            width="140"
+            height="35"
+          >
+            <!-- Versão menor do logo para o footer -->
+            <defs>
+              <linearGradient
+                id="footerLogoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4361ee" />
+                <stop offset="100%" stop-color="#4cc9f0" />
+              </linearGradient>
+            </defs>
+
+            <circle cx="30" cy="30" r="24" fill="url(#footerLogoGradient)" />
+            <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+            <path
+              d="M19 32l6 6 6-6M31 28l-6-6-6 6"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="25"
+              y1="14"
+              x2="25"
+              y2="46"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="1,5"
+            />
+
+            <text
+              x="65"
+              y="38"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="24"
+              font-weight="700"
+              fill="#212529"
+            >
+              <tspan fill="#4361ee">Converta</tspan>
+              <tspan fill="#f72585">Facil</tspan>
+            </text>
+          </svg>
+          <div class="footer-logo-text">Conversões rápidas e precisas</div>
+        </div>
+
+        <div class="footer-content">
+          <div class="footer-links">
+            <div class="footer-links-col">
+              <h3>Contato</h3>
+              <a href="mailto:contato@convertafacil.com">
+                <i class="icon icon-mail"></i> Email
+              </a>
+              <a
+                href="https://github.com/LuisT-ls/convertafacil"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-github"></i> GitHub
+              </a>
+            </div>
+
+            <div class="footer-links-col">
+              <h3>Redes Sociais</h3>
+              <a
+                href="https://linkedin.com/in/luis-tei"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-linkedin"></i> LinkedIn
+              </a>
+              <a
+                href="https://github.com/LuisT-ls"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-github"></i> GitHub
+              </a>
+              <a
+                href="https://instagram.com/luis.tei"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-instagram"></i> Instagram
+              </a>
+            </div>
+
+            <div class="footer-links-col">
+              <h3>Recursos</h3>
+              <a href="/pages/documentation.html">
+                <i class="icon icon-book"></i> Documentação
+              </a>
+              <a href="faq.html"> <i class="icon icon-help"></i> FAQ </a>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://linkedin.com/in/luis-tei"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="icon icon-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/LuisT-ls"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <i class="icon icon-github"></i>
+            </a>
+            <a
+              href="https://instagram.com/luis.tei"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="icon icon-instagram"></i>
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-copyright">
+              © 2025 ConvertaFacil - Desenvolvido por
+              <a
+                href="https://github.com/LuisT-ls"
+                target="_blank"
+                rel="noopener"
+                >Luis T</a
+              >
+            </div>
+            <div class="footer-attribution">
+              Taxas de câmbio fornecidas por
+              <a
+                href="https://www.exchangerate-api.com"
+                target="_blank"
+                rel="noopener"
+                >ExchangeRate-API</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/modules/faq.js"></script>
+  </body>
+</html>

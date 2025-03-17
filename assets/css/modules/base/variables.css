@@ -1,0 +1,74 @@
+:root {
+  /* Cores - Paleta atualizada mais moderna */
+  --color-primary: #4361ee;
+  --color-primary-light: #4895ef;
+  --color-primary-dark: #3a0ca3;
+  --color-primary-gradient: linear-gradient(135deg, #4361ee, #4cc9f0);
+
+  --color-secondary: #f72585;
+  --color-secondary-light: #ff5d8f;
+  --color-secondary-dark: #b5179e;
+  --color-secondary-gradient: linear-gradient(135deg, #f72585, #b5179e);
+
+  --color-success: #06d6a0;
+  --color-warning: #ffd166;
+  --color-error: #ef476f;
+  --color-info: #118ab2;
+
+  --color-background: #ffffff;
+  --color-card: #f8f9fa;
+  --color-border: #e9ecef;
+
+  --color-text: #212529;
+  --color-text-muted: #6c757d;
+  --color-text-light: #adb5bd;
+
+  /* Fontes - Atualizado para fonte moderna */
+  --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+
+  /* Espaçamento */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+
+  /* Bordas - Atualizados para cantos mais arredondados */
+  --border-radius-sm: 0.375rem; /* 6px */
+  --border-radius: 0.75rem; /* 12px */
+  --border-radius-lg: 1.25rem; /* 20px */
+  --border-radius-full: 9999px;
+
+  /* Sombras - Atualizadas para efeito mais sutil */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(67, 97, 238, 0.3);
+
+  /* Transições */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --header-height: 4.5rem;
+  --footer-height: 6rem;
+  --container-max-width: 1200px;
+  --container-padding: 1.25rem;
+
+  /* Animações */
+  --animation-bounce: bounce 1s infinite;
+  --animation-pulse: pulse 2s infinite;
+  --animation-spin: spin 1s linear infinite;
+}

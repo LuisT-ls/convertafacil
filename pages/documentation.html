@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentação - ConvertaFacil</title>
+    <meta
+      name="description"
+      content="Documentação completa da ferramenta ConvertaFacil para conversão de unidades."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="../assets/img/favicon/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 240 60"
+            width="180"
+            height="45"
+          >
+            <!-- Fundo do logo -->
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4361ee" />
+                <stop offset="100%" stop-color="#4cc9f0" />
+              </linearGradient>
+            </defs>
+
+            <!-- Círculos decorativos -->
+            <circle cx="30" cy="30" r="24" fill="url(#logoGradient)" />
+            <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+            <!-- Ícone de conversão -->
+            <path
+              d="M19 32l6 6 6-6M31 28l-6-6-6 6"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="25"
+              y1="14"
+              x2="25"
+              y2="46"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="1,5"
+            />
+
+            <!-- Texto ConvertaFacil -->
+            <text
+              x="65"
+              y="38"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="24"
+              font-weight="700"
+              fill="#212529"
+            >
+              <tspan fill="#4361ee">Converta</tspan>
+              <tspan fill="#f72585">Facil</tspan>
+            </text>
+          </svg>
+        </a>
+
+        <div class="header-actions">
+          <a href="/" class="btn btn-outline btn-sm">Início</a>
+          <a href="/pages/faq.html" class="btn btn-outline btn-sm">FAQ</a>
+          <button
+            id="darkModeToggle"
+            class="theme-toggle"
+            aria-label="Alternar modo escuro"
+          >
+            <i class="icon icon-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="docs-header">
+          <h1>Documentação ConvertaFacil</h1>
+          <p>
+            Guia completo para utilizar todas as funcionalidades de conversão
+          </p>
+        </div>
+
+        <div class="docs-content">
+          <aside class="docs-sidebar">
+            <div class="sidebar-container">
+              <h2>Conteúdo</h2>
+              <nav class="docs-nav">
+                <ul>
+                  <li><a href="#introducao" class="active">Introdução</a></li>
+                  <li><a href="#comecando">Começando</a></li>
+                  <li>
+                    <a href="#conversoes">Tipos de Conversão</a>
+                    <ul>
+                      <li><a href="#moeda">Moeda</a></li>
+                      <li><a href="#temperatura">Temperatura</a></li>
+                      <li><a href="#comprimento">Comprimento</a></li>
+                      <li><a href="#peso">Peso</a></li>
+                      <li><a href="#volume">Volume</a></li>
+                      <li><a href="#area">Área</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#historico">Histórico de Conversões</a></li>
+                  <li><a href="#api">Informações da API</a></li>
+                  <li><a href="#tema-escuro">Tema Escuro</a></li>
+                  <li><a href="#perguntas">Perguntas Frequentes</a></li>
+                </ul>
+              </nav>
+            </div>
+          </aside>
+
+          <div class="docs-main">
+            <section id="introducao" class="docs-section">
+              <h2>Introdução</h2>
+              <p>
+                O ConvertaFacil é uma ferramenta online gratuita que permite
+                realizar conversões entre diferentes unidades de medida. Seja
+                para converter moedas, temperatura, comprimento, peso, volume ou
+                área, o ConvertaFacil oferece uma interface amigável e
+                resultados precisos.
+              </p>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="icon icon-calculator"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Por que usar o ConvertaFacil?</h3>
+                  <ul>
+                    <li>Interface simples e intuitiva</li>
+                    <li>Conversões rápidas e precisas</li>
+                    <li>Taxas de câmbio atualizadas</li>
+                    <li>Histórico de conversões</li>
+                    <li>Sem necessidade de cadastro</li>
+                    <li>Tema escuro para uso noturno</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section id="comecando" class="docs-section">
+              <h2>Começando</h2>
+              <p>Para utilizar o ConvertaFacil, siga estes passos simples:</p>
+
+              <div class="steps">
+                <div class="step-item">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Selecione o tipo de conversão</h3>
+                    <p>
+                      Escolha entre Moeda, Temperatura, Comprimento, Peso,
+                      Volume ou Área.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Digite o valor a ser convertido</h3>
+                    <p>
+                      Insira o valor numérico no campo de entrada à esquerda.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Selecione as unidades</h3>
+                    <p>
+                      Escolha a unidade de origem e a unidade de destino nos
+                      menus suspensos.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Veja o resultado</h3>
+                    <p>
+                      O resultado da conversão será exibido instantaneamente no
+                      campo à direita.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box">
+                <p>
+                  <strong>Dica:</strong> Use o botão de troca (↑↓) para inverter
+                  rapidamente a direção da conversão.
+                </p>
+              </div>
+            </section>
+
+            <section id="conversoes" class="docs-section">
+              <h2>Tipos de Conversão</h2>
+              <p>
+                O ConvertaFacil suporta diversos tipos de conversão, cada um com
+                suas próprias unidades e fórmulas.
+              </p>
+
+              <section id="moeda" class="subsection">
+                <h3>Conversão de Moedas</h3>
+                <p>
+                  Permite converter entre diferentes moedas usando taxas de
+                  câmbio atualizadas.
+                </p>
+
+                <div class="info-box">
+                  <p>
+                    <strong>Fonte de dados:</strong> As taxas de câmbio são
+                    fornecidas pela
+                    <a
+                      href="https://www.exchangerate-api.com"
+                      target="_blank"
+                      rel="noopener"
+                      >ExchangeRate-API</a
+                    >
+                    e são atualizadas regularmente.
+                  </p>
+                </div>
+
+                <p><strong>Moedas suportadas:</strong></p>
+                <ul class="column-list">
+                  <li>Dólar Americano (USD)</li>
+                  <li>Euro (EUR)</li>
+                  <li>Real Brasileiro (BRL)</li>
+                  <li>Libra Esterlina (GBP)</li>
+                  <li>Iene Japonês (JPY)</li>
+                  <li>Dólar Canadense (CAD)</li>
+                  <li>Dólar Australiano (AUD)</li>
+                  <li>Yuan Chinês (CNY)</li>
+                  <li>Franco Suíço (CHF)</li>
+                  <li>Peso Argentino (ARS)</li>
+                </ul>
+              </section>
+
+              <section id="temperatura" class="subsection">
+                <h3>Conversão de Temperatura</h3>
+                <p>
+                  Permite converter entre diferentes escalas de temperatura.
+                </p>
+
+                <p><strong>Unidades suportadas:</strong></p>
+                <ul>
+                  <li>Celsius (°C)</li>
+                  <li>Fahrenheit (°F)</li>
+                  <li>Kelvin (K)</li>
+                </ul>
+
+                <div class="formula-box">
+                  <h4>Fórmulas de Conversão</h4>
+                  <ul>
+                    <li>Celsius para Fahrenheit: °C × (9/5) + 32 = °F</li>
+                    <li>Celsius para Kelvin: °C + 273.15 = K</li>
+                    <li>Fahrenheit para Celsius: (°F - 32) × (5/9) = °C</li>
+                    <li>
+                      Fahrenheit para Kelvin: (°F - 32) × (5/9) + 273.15 = K
+                    </li>
+                    <li>Kelvin para Celsius: K - 273.15 = °C</li>
+                    <li>
+                      Kelvin para Fahrenheit: (K - 273.15) × (9/5) + 32 = °F
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section id="comprimento" class="subsection">
+                <h3>Conversão de Comprimento</h3>
+                <p>
+                  Permite converter entre diferentes unidades de comprimento.
+                </p>
+
+                <p><strong>Unidades suportadas:</strong></p>
+                <ul class="column-list">
+                  <li>Metro (m)</li>
+                  <li>Quilômetro (km)</li>
+                  <li>Centímetro (cm)</li>
+                  <li>Milímetro (mm)</li>
+                  <li>Polegada (in)</li>
+                  <li>Pé (ft)</li>
+                  <li>Jarda (yd)</li>
+                  <li>Milha (mi)</li>
+                </ul>
+              </section>
+
+              <section id="peso" class="subsection">
+                <h3>Conversão de Peso</h3>
+                <p>Permite converter entre diferentes unidades de peso.</p>
+
+                <p><strong>Unidades suportadas:</strong></p>
+                <ul class="column-list">
+                  <li>Quilograma (kg)</li>
+                  <li>Grama (g)</li>
+                  <li>Miligrama (mg)</li>
+                  <li>Tonelada (t)</li>
+                  <li>Libra (lb)</li>
+                  <li>Onça (oz)</li>
+                  <li>Stone (st)</li>
+                </ul>
+              </section>
+
+              <section id="volume" class="subsection">
+                <h3>Conversão de Volume</h3>
+                <p>Permite converter entre diferentes unidades de volume.</p>
+
+                <p><strong>Unidades suportadas:</strong></p>
+                <ul class="column-list">
+                  <li>Litro (l)</li>
+                  <li>Mililitro (ml)</li>
+                  <li>Metro cúbico (m³)</li>
+                  <li>Centímetro cúbico (cm³)</li>
+                  <li>Galão (EUA) (gal)</li>
+                  <li>Quarto (EUA) (qt)</li>
+                  <li>Pinta (EUA) (pt)</li>
+                  <li>Onça fluida (EUA) (fl oz)</li>
+                  <li>Xícara (EUA) (cup)</li>
+                  <li>Colher de sopa (tbsp)</li>
+                  <li>Colher de chá (tsp)</li>
+                </ul>
+              </section>
+
+              <section id="area" class="subsection">
+                <h3>Conversão de Área</h3>
+                <p>Permite converter entre diferentes unidades de área.</p>
+
+                <p><strong>Unidades suportadas:</strong></p>
+                <ul class="column-list">
+                  <li>Metro quadrado (m²)</li>
+                  <li>Quilômetro quadrado (km²)</li>
+                  <li>Centímetro quadrado (cm²)</li>
+                  <li>Milímetro quadrado (mm²)</li>
+                  <li>Hectare (ha)</li>
+                  <li>Acre (acre)</li>
+                  <li>Pé quadrado (ft²)</li>
+                  <li>Polegada quadrada (in²)</li>
+                  <li>Jarda quadrada (yd²)</li>
+                  <li>Milha quadrada (mi²)</li>
+                </ul>
+              </section>
+            </section>
+
+            <section id="historico" class="docs-section">
+              <h2>Histórico de Conversões</h2>
+              <p>
+                O ConvertaFacil mantém um histórico das suas conversões recentes
+                para fácil referência.
+              </p>
+
+              <div class="info-box">
+                <p>
+                  <strong>Nota:</strong> O histórico é armazenado localmente no
+                  seu navegador e não é compartilhado com nossos servidores.
+                </p>
+              </div>
+
+              <h3>Recursos do Histórico</h3>
+              <ul>
+                <li>
+                  <strong>Visualizar conversões recentes:</strong> As últimas 10
+                  conversões são exibidas na seção de histórico.
+                </li>
+                <li>
+                  <strong>Reutilizar conversões:</strong> Clique em qualquer
+                  item do histórico para carregá-lo novamente na calculadora.
+                </li>
+                <li>
+                  <strong>Remover itens individuais:</strong> Remova conversões
+                  específicas clicando no ícone de lixeira ao lado do item.
+                </li>
+                <li>
+                  <strong>Limpar todo o histórico:</strong> Use o botão "Limpar
+                  histórico" para remover todas as conversões salvas.
+                </li>
+              </ul>
+            </section>
+
+            <section id="api" class="docs-section">
+              <h2>Informações da API</h2>
+              <p>
+                O ConvertaFacil utiliza a ExchangeRate-API para obter taxas de
+                câmbio atualizadas.
+              </p>
+
+              <h3>Funcionamento da API</h3>
+              <ul>
+                <li>
+                  As taxas de câmbio são atualizadas automaticamente, garantindo
+                  valores precisos e atuais.
+                </li>
+                <li>
+                  Os dados são armazenados em cache por até 24 horas para
+                  garantir um desempenho rápido e reduzir requisições
+                  desnecessárias.
+                </li>
+                <li>
+                  Se a API estiver indisponível, o ConvertaFacil usará as taxas
+                  armazenadas em cache mais recentes.
+                </li>
+                <li>
+                  Em caso de falha completa, taxas fixas de backup são
+                  utilizadas para manter a funcionalidade básica.
+                </li>
+              </ul>
+
+              <div class="code-example">
+                <h4>Exemplo de resposta da API</h4>
+                <pre><code>{
+  "result": "success",
+  "base_code": "USD",
+  "time_last_update_utc": "Fri, 24 Mar 2023 00:00:01 +0000",
+  "rates": {
+    "USD": 1,
+    "EUR": 0.92,
+    "BRL": 5.20,
+    "GBP": 0.79,
+    ...
+  }
+}</code></pre>
+              </div>
+            </section>
+
+            <section id="tema-escuro" class="docs-section">
+              <h2>Tema Escuro</h2>
+              <p>
+                O ConvertaFacil oferece um tema escuro para melhorar a
+                experiência do usuário, especialmente em ambientes com pouca
+                luz.
+              </p>
+
+              <h3>Como ativar o tema escuro</h3>
+              <ol>
+                <li>
+                  Clique no ícone de lua no canto superior direito da página.
+                </li>
+                <li>A interface mudará automaticamente para o tema escuro.</li>
+                <li>Para voltar ao tema claro, clique no ícone de sol.</li>
+              </ol>
+
+              <div class="info-box">
+                <p>
+                  <strong>Dica:</strong> O ConvertaFacil também respeita a
+                  preferência de tema do seu sistema operacional. Se você já
+                  tiver o modo escuro ativado no seu dispositivo, a aplicação
+                  iniciará automaticamente com o tema escuro.
+                </p>
+              </div>
+            </section>
+
+            <section id="perguntas" class="docs-section">
+              <h2>Perguntas Frequentes</h2>
+              <p>
+                Confira a <a href="faq.html">página de FAQ</a> para respostas às
+                perguntas mais comuns sobre o ConvertaFacil.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 240 60"
+            width="140"
+            height="35"
+          >
+            <!-- Versão menor do logo para o footer -->
+            <defs>
+              <linearGradient
+                id="footerLogoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4361ee" />
+                <stop offset="100%" stop-color="#4cc9f0" />
+              </linearGradient>
+            </defs>
+
+            <circle cx="30" cy="30" r="24" fill="url(#footerLogoGradient)" />
+            <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+            <path
+              d="M19 32l6 6 6-6M31 28l-6-6-6 6"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="25"
+              y1="14"
+              x2="25"
+              y2="46"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="1,5"
+            />
+
+            <text
+              x="65"
+              y="38"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="24"
+              font-weight="700"
+              fill="#212529"
+            >
+              <tspan fill="#4361ee">Converta</tspan>
+              <tspan fill="#f72585">Facil</tspan>
+            </text>
+          </svg>
+          <div class="footer-logo-text">Conversões rápidas e precisas</div>
+        </div>
+
+        <div class="footer-content">
+          <div class="footer-links">
+            <div class="footer-links-col">
+              <h3>Contato</h3>
+              <a href="mailto:contato@convertafacil.com">
+                <i class="icon icon-mail"></i> Email
+              </a>
+              <a
+                href="https://github.com/LuisT-ls/convertafacil"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-github"></i> GitHub
+              </a>
+            </div>
+
+            <div class="footer-links-col">
+              <h3>Redes Sociais</h3>
+              <a
+                href="https://linkedin.com/in/luis-tei"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-linkedin"></i> LinkedIn
+              </a>
+              <a
+                href="https://github.com/LuisT-ls"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-github"></i> GitHub
+              </a>
+              <a
+                href="https://instagram.com/luis.tei"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-instagram"></i> Instagram
+              </a>
+            </div>
+
+            <div class="footer-links-col">
+              <h3>Recursos</h3>
+              <a href="/pages/documentation.html">
+                <i class="icon icon-book"></i> Documentação
+              </a>
+              <a href="/pages/faq.html"> <i class="icon icon-help"></i> FAQ </a>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://linkedin.com/in/luis-tei"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="icon icon-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/LuisT-ls"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <i class="icon icon-github"></i>
+            </a>
+            <a
+              href="https://instagram.com/luis.tei"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="icon icon-instagram"></i>
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-copyright">
+              © 2025 ConvertaFacil - Desenvolvido por
+              <a
+                href="https://github.com/LuisT-ls"
+                target="_blank"
+                rel="noopener"
+                >Luis T</a
+              >
+            </div>
+            <div class="footer-attribution">
+              Taxas de câmbio fornecidas por
+              <a
+                href="https://www.exchangerate-api.com"
+                target="_blank"
+                rel="noopener"
+                >ExchangeRate-API</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="/js/app.js"></script>
+    <script type="module" src="/js/modules/documentation.js"></script>
+  </body>
+</html>

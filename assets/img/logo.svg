@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
+  <!-- Fundo do logo -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361ee" />
+      <stop offset="100%" stop-color="#4cc9f0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Círculos decorativos -->
+  <circle cx="30" cy="30" r="24" fill="url(#logoGradient)" />
+  <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+  <!-- Ícone de conversão -->
+  <path d="M19 32l6 6 6-6M31 28l-6-6-6 6" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <line x1="25" y1="14" x2="25" y2="46" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1,5" />
+
+  <!-- Texto ConvertaFacil -->
+  <text x="65" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#212529">
+    <tspan fill="#4361ee">Converta</tspan>
+    <tspan fill="#f72585">Facil</tspan>
+  </text>
+</svg>

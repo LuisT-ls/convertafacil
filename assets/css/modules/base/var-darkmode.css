@@ -1,0 +1,26 @@
+[data-theme='dark'] {
+  --color-primary: #4cc9f0;
+  --color-primary-light: #90e0ef;
+  --color-primary-dark: #3a86ff;
+  --color-primary-gradient: linear-gradient(135deg, #3a86ff, #4cc9f0);
+
+  --color-secondary: #f72585;
+  --color-secondary-light: #ff5d8f;
+  --color-secondary-dark: #b5179e;
+  --color-secondary-gradient: linear-gradient(135deg, #f72585, #b5179e);
+
+  --color-background: #121212;
+  --color-card: #1e1e1e;
+  --color-border: #2f2f2f;
+
+  --color-text: #f8f9fa;
+  --color-text-muted: #adb5bd;
+  --color-text-light: #6c757d;
+
+  /* Ajuste de sombras para o modo escuro */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-focus: 0 0 0 3px rgba(76, 201, 240, 0.3);
+}

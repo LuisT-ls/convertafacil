@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConvertaFacil - Calculadora de Conversão de Unidades</title>
+    <meta
+      name="description"
+      content="Ferramenta online para converter facilmente entre diferentes unidades de medida: moedas, temperatura, comprimento, peso e mais."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./assets/img/favicon/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Metadados Open Graph -->
+    <meta
+      property="og:title"
+      content="ConvertaFacil - Calculadora de Conversão de Unidades"
+    />
+    <meta
+      property="og:description"
+      content="Converta facilmente entre diferentes unidades de medida: moedas, temperatura, comprimento, peso e mais."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://convertafacil.vercel.app" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 240 60"
+            width="180"
+            height="45"
+          >
+            <!-- Fundo do logo -->
+            <defs>
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4361ee" />
+                <stop offset="100%" stop-color="#4cc9f0" />
+              </linearGradient>
+            </defs>
+
+            <!-- Círculos decorativos -->
+            <circle cx="30" cy="30" r="24" fill="url(#logoGradient)" />
+            <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+            <!-- Ícone de conversão -->
+            <path
+              d="M19 32l6 6 6-6M31 28l-6-6-6 6"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="25"
+              y1="14"
+              x2="25"
+              y2="46"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="1,5"
+            />
+
+            <!-- Texto ConvertaFacil -->
+            <text
+              x="65"
+              y="38"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="24"
+              font-weight="700"
+              fill="#212529"
+            >
+              <tspan fill="#4361ee">Converta</tspan>
+              <tspan fill="#f72585">Facil</tspan>
+            </text>
+          </svg>
+        </a>
+
+        <div class="header-actions">
+          <button
+            id="darkModeToggle"
+            class="theme-toggle"
+            aria-label="Alternar modo escuro"
+          >
+            <i class="icon icon-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="converter-wrapper">
+          <!-- Seletor de categorias -->
+          <div class="converter-categories">
+            <button class="category-btn active" data-category="moeda">
+              Moeda
+            </button>
+            <button class="category-btn" data-category="temperatura">
+              Temperatura
+            </button>
+            <button class="category-btn" data-category="comprimento">
+              Comprimento
+            </button>
+            <button class="category-btn" data-category="peso">Peso</button>
+            <button class="category-btn" data-category="volume">Volume</button>
+            <button class="category-btn" data-category="area">Área</button>
+          </div>
+
+          <!-- Interface principal de conversão -->
+          <div class="converter-interface">
+            <div class="converter-row">
+              <div class="converter-input-group">
+                <input
+                  type="number"
+                  id="inputValue"
+                  class="converter-input"
+                  value="1"
+                />
+                <select id="inputUnit" class="converter-select">
+                  <!-- Opções serão preenchidas via JavaScript -->
+                </select>
+              </div>
+
+              <button
+                id="swapButton"
+                class="swap-btn"
+                aria-label="Trocar unidades"
+              >
+                <i class="icon icon-swap"></i>
+              </button>
+
+              <div class="converter-input-group">
+                <input
+                  type="number"
+                  id="outputValue"
+                  class="converter-input"
+                  readonly
+                />
+                <select id="outputUnit" class="converter-select">
+                  <!-- Opções serão preenchidas via JavaScript -->
+                </select>
+              </div>
+            </div>
+
+            <div class="conversion-info">
+              <p id="conversionFormula">1 USD = 5.23 BRL</p>
+              <p id="lastUpdate" class="small-text">
+                Última atualização: <span>Agora</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Histórico de conversões -->
+        <div class="conversion-history">
+          <h2>Histórico de Conversões</h2>
+          <ul id="historyList" class="history-list">
+            <!-- Itens serão adicionados via JavaScript -->
+          </ul>
+          <button id="clearHistoryBtn" class="btn btn-secondary">
+            Limpar histórico
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 240 60"
+            width="140"
+            height="35"
+          >
+            <!-- Versão menor do logo para o footer -->
+            <defs>
+              <linearGradient
+                id="footerLogoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" stop-color="#4361ee" />
+                <stop offset="100%" stop-color="#4cc9f0" />
+              </linearGradient>
+            </defs>
+
+            <circle cx="30" cy="30" r="24" fill="url(#footerLogoGradient)" />
+            <circle cx="30" cy="30" r="20" fill="#ffffff" opacity="0.2" />
+
+            <path
+              d="M19 32l6 6 6-6M31 28l-6-6-6 6"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+            <line
+              x1="25"
+              y1="14"
+              x2="25"
+              y2="46"
+              stroke="#ffffff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-dasharray="1,5"
+            />
+
+            <text
+              x="65"
+              y="38"
+              font-family="'Segoe UI', Arial, sans-serif"
+              font-size="24"
+              font-weight="700"
+              fill="#212529"
+            >
+              <tspan fill="#4361ee">Converta</tspan>
+              <tspan fill="#f72585">Facil</tspan>
+            </text>
+          </svg>
+          <div class="footer-logo-text">Conversões rápidas e precisas</div>
+        </div>
+
+        <div class="footer-content">
+          <div class="footer-links">
+            <div class="footer-links-col">
+              <h3>Contato</h3>
+              <a href="mailto:contato@convertafacil.com">
+                <i class="icon icon-mail"></i> Email
+              </a>
+              <a
+                href="https://github.com/LuisT-ls/convertafacil"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-github"></i> GitHub
+              </a>
+            </div>
+
+            <div class="footer-links-col">
+              <h3>Redes Sociais</h3>
+              <a
+                href="https://linkedin.com/in/luis-tei"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-linkedin"></i> LinkedIn
+              </a>
+              <a
+                href="https://github.com/LuisT-ls"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-github"></i> GitHub
+              </a>
+              <a
+                href="https://instagram.com/luis.tei"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-instagram"></i> Instagram
+              </a>
+            </div>
+
+            <div class="footer-links-col">
+              <h3>Recursos</h3>
+              <a
+                href="/pages/documentation.html"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="icon icon-book"></i> Documentação
+              </a>
+              <a href="/pages/faq.html" target="_blank" rel="noopener">
+                <i class="icon icon-help"></i> FAQ
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://linkedin.com/in/luis-tei"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <i class="icon icon-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/LuisT-ls"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <i class="icon icon-github"></i>
+            </a>
+            <a
+              href="https://instagram.com/luis.tei"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <i class="icon icon-instagram"></i>
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-copyright">
+              © 2025 ConvertaFacil - Desenvolvido por
+              <a
+                href="https://github.com/LuisT-ls"
+                target="_blank"
+                rel="noopener"
+                >Luis T</a
+              >
+            </div>
+            <div class="footer-attribution">
+              Taxas de câmbio fornecidas por
+              <a
+                href="https://www.exchangerate-api.com"
+                target="_blank"
+                rel="noopener"
+                >ExchangeRate-API</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

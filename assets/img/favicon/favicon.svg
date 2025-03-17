@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Fundo do favicon -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4361ee" />
+      <stop offset="100%" stop-color="#4cc9f0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo principal -->
+  <circle cx="30" cy="30" r="29" fill="url(#logoGradient)" />
+  <circle cx="30" cy="30" r="24" fill="url(#logoGradient)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3" />
+
+  <!-- Ícone de conversão -->
+  <path d="M19 32l6 6 6-6M31 28l-6-6-6 6" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <line x1="25" y1="14" x2="25" y2="46" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1,5" />
+</svg>

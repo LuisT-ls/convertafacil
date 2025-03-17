@@ -1,0 +1,29 @@
+/* Base */
+@import './modules/base/reset.css';
+@import './modules/base/variables.css';
+@import './modules/base/var-darkmode.css';
+@import './modules/base/typography.css';
+@import './modules/base/animations.css';
+@import './modules/base/scrollbar.css';
+
+/* Layout */
+@import './modules/layout/container.css';
+@import './modules/layout/grid.css';
+@import './modules/layout/header.css';
+@import './modules/layout/footer.css';
+
+/* Components */
+@import './modules/components/buttons.css';
+@import './modules/components/forms.css';
+@import './modules/components/icon.css';
+@import './modules/components/progress.css';
+
+/* Features */
+@import './modules/features/converter.css';
+@import './modules/features/history.css';
+@import './modules/features/faq.css';
+@import './modules/features/documentation.css';
+
+/* Utils */
+@import './modules/utils/darkmode.css';
+@import './modules/utils/responsive.css';

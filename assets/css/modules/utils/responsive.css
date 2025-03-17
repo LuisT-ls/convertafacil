@@ -1,0 +1,76 @@
+/* Classes responsivas */
+
+/* Utilitários para exibição responsiva */
+.hide-sm {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .hide-sm {
+    display: initial;
+  }
+
+  .show-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-md {
+    display: none;
+  }
+
+  .show-md {
+    display: initial;
+  }
+}
+
+@media (min-width: 992px) {
+  .hide-lg {
+    display: none;
+  }
+
+  .show-lg {
+    display: initial;
+  }
+}
+
+/* Ajustes de grid responsivo */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+.grid-4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
